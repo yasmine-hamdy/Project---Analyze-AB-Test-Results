@@ -40,3 +40,7 @@ df2 = df.drop(df[(df.group == 'control') & (df.landing_page == 'new_page')].inde
 df2.head()
 df2.drop(df2[(df2.group == 'treatment') & (df2.landing_page == 'old_page')].index, inplace=True)
 df2.head()
+
+# Double Check all of the incorrect rows were removed from df2 - 
+# Output of the statement below should be 0
+df2[((df2['group'] == 'treatment') == (df2['landing_page'] == 'new_page')) == False].shape[0]
