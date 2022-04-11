@@ -28,3 +28,6 @@ df.user_id.nunique()
 
 # proportion of users converted
 df.converted.mean()
+
+# number of times when the "group" is treatment but "landing_page" is not a new_page
+df.groupby('group')['landing_page'].value_counts()
