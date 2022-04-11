@@ -48,3 +48,5 @@ df2[((df2['group'] == 'treatment') == (df2['landing_page'] == 'new_page')) == Fa
 # number of unique user_ids in df2
 df2.user_id.nunique()
 
+# repeated user_id in df2
+df2.loc[df2.user_id.duplicated(), :]
