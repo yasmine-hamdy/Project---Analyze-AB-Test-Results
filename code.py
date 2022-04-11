@@ -111,3 +111,9 @@ n_new
 # What is  𝑛𝑜𝑙𝑑 , the number of individuals in the control group?
 n_old = df2[df2['landing_page'] == 'old_page'].count()[0]
 n_old
+
+# Simulate a Sample for the treatment Group
+# Simulate  𝑛𝑛𝑒𝑤  transactions with a conversion rate of  𝑝𝑛𝑒𝑤  under the null hypothesis
+# hint: use np.random.choice()
+new_page_converted = np.random.choice([0,1], size=(1, n_new), p=[1-p_converted_pop, p_converted_pop])
+new_page_converted
