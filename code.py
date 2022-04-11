@@ -243,3 +243,20 @@ logit_mod =sm.Logit(df_merged['converted'],df_merged[['intercept', 'ab_page', 'U
 
 results = logit_mod.fit()
 results.summary2()
+
+# Again, all of coefficients' (not the intercept) p-values in the summary are 
+# greater than the type I error rate (0.05). Therefore, we would choose to 
+# reject the null hypotheses of the regression model because there is statistical
+# evidence that the population slope associated with the specified coefficient 
+# in relating to conversion is non-zero holding all others constant.
+
+# The summary shows that after adding the interaction variables:
+
+# Conversion is 0.98 times as likely in the treatment group than the control group, holding all other variables constant.
+# Conversion is 0.99 times as likely for US residents than CA residents, holding all other variables constant.
+# Conversion is 0.98 times as likely for Uk residents than CA residents, holding all other variables constant.
+# Conversion is 1.03 times as likely for US residents in the treatment group than CA residents, holding all other variables constant.
+# Conversion is 0.95 times as likely for UK residents in the treatment group than CA residents, holding all other variables constant.
+
+# From my point of view, we can do without the interaction variables because they
+# didn't add significant changes to our model.
