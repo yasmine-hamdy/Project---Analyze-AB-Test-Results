@@ -236,3 +236,10 @@ results.summary2()
 # effects on conversion.
 df_merged['US_ab_page'] = df_merged['US'] * df_merged['ab_page']
 df_merged['UK_ab_page'] = df_merged['UK'] * df_merged['ab_page']
+
+# Fit your model, and summarize the results
+
+logit_mod =sm.Logit(df_merged['converted'],df_merged[['intercept', 'ab_page', 'US', 'UK', 'US_ab_page', 'UK_ab_page']])
+
+results = logit_mod.fit()
+results.summary2()
