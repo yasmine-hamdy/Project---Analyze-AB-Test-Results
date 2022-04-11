@@ -122,3 +122,6 @@ new_page_converted
 # Simulate  𝑛𝑜𝑙𝑑  transactions with a conversion rate of  𝑝𝑜𝑙𝑑  under the null hypothesis
 old_page_converted = np.random.choice([0,1], size=(1, n_old), p=[1-p_converted_pop, p_converted_pop])
 old_page_converted
+
+# Find the difference in the "converted" probability  (𝑝′𝑛𝑒𝑤  -  𝑝′𝑜𝑙𝑑)  for the simulated samples above
+new_page_converted.mean() - old_page_converted.mean()
