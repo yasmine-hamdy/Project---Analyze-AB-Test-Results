@@ -72,7 +72,9 @@ control_conv
 treat_conv = (df2.query('group == "treatment"')['converted']).mean()
 treat_conv
 
-
+# Calculate the actual difference (obs_diff) between the conversion rates for the two groups.
+obs_diff = treat_conv - control_conv
+obs_diff
 
 
 
