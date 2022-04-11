@@ -15,3 +15,8 @@ their decision.
 * Pandas 
 * Matplotlib 
 * Statsmodels
+
+# Project Attributes:
+* Analyzed the results of an A/B test run by an e-commerce website using Python
+* Wrote Python code to find conditional probabilities pertaining to the dataset
+* Performed a hypothesis test using sampling distribution simulation, a two-sample z-test, and logistic regression
