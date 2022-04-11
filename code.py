@@ -125,3 +125,13 @@ old_page_converted
 
 # Find the difference in the "converted" probability  (𝑝′𝑛𝑒𝑤  -  𝑝′𝑜𝑙𝑑)  for the simulated samples above
 new_page_converted.mean() - old_page_converted.mean()
+
+# Re-create new_page_converted and old_page_converted and find the  (𝑝′𝑛𝑒𝑤  -  𝑝′𝑜𝑙𝑑)  value 10,000 times using the same simulation process used above
+# Store all  (𝑝′𝑛𝑒𝑤  -  𝑝′𝑜𝑙𝑑)  values in a NumPy array called `p_diffs
+
+# Sampling distribution 
+p_diffs = []
+
+new_page_converted = np.random.binomial(n_new, p_converted_pop, 10000)/n_new
+old_page_converted = np.random.binomial(n_old, p_converted_pop, 10000)/n_old
+p_diffs = new_page_converted - old_page_converted
