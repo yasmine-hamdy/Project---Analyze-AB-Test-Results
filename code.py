@@ -189,3 +189,7 @@ df2[['control', 'ab_page']]= pd.get_dummies(df2['group'])
 df2=df2.drop('control', axis=1)
 df2.head()
 
+logit_mod =sm.Logit(df2['converted'],df2[['intercept', 'ab_page']])
+
+results = logit_mod.fit()
+
