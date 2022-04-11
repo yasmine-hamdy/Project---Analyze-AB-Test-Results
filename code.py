@@ -150,3 +150,21 @@ plt.axvline(obs_diff, c='r');
 # increase in conversion given there was actually no change in conversion. 
 # The p-value above leads us to fail to reject the null hypothesis because 
 # it's higher than the error threshhold we had set (5%).
+
+
+# Using Built-in Methods for Hypothesis Testing
+
+import statsmodels.api as sm
+
+# number of conversions with the old_page
+convert_old = df2[(df2.landing_page == 'old_page') & (df2.converted)].count()[0]
+
+# number of conversions with the new_page
+convert_new = df2[(df2.landing_page == 'new_page') & (df2.converted)].count()[0]
+
+# number of individuals who were shown the old_page
+n_old = df2[df2['landing_page'] == 'old_page'].count()[0]
+
+# number of individuals who received new_page
+n_new = df2[df2['landing_page'] == 'new_page'].count()[0]
+
