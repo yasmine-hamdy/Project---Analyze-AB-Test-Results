@@ -177,3 +177,15 @@ print(z_score, p_value)
 # failing to reject the null hypothesis. Morevoer, the z-score of 1.31 is less 
 # than  𝑍𝛼  or  𝑍0.05  which is 1.645 for one-tailed tests; and since this is a 
 # right-tailed test, we again fail to reject the null hypothesis.
+
+
+# Part III - A regression approach 
+
+# Since each row in the df2 data is either a conversion or no conversion, Logistic Regression should be performed in this case
+
+#  fit the regression model 
+df2['intercept']= 1
+df2[['control', 'ab_page']]= pd.get_dummies(df2['group'])
+df2=df2.drop('control', axis=1)
+df2.head()
+
