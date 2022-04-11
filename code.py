@@ -97,3 +97,9 @@ prob_new_page
 # Use a sample size for each group equal to the ones in the df2 data.
 # Compute the difference in the "converted" probability for the two samples above.
 # Perform the sampling distribution for the "difference in the converted probability" between the two simulated-samples over 10,000 iterations; and calculate an estimate.
+
+# conversion rate for  𝑝𝑛𝑒𝑤  under the null hypothesis
+p_converted_pop
+
+# conversion rate for  𝑝𝑜𝑙𝑑  under the null hypothesis
+p_converted_pop
