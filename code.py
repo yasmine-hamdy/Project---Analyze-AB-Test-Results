@@ -54,4 +54,12 @@ df2.loc[df2.user_id.duplicated(), :]
 # Display the rows for the duplicate user_id
 df2.query("user_id == 773192")
 
+# Remove one of the rows with a duplicate user_id..
+# Hint: The dataframe.drop_duplicates() may not work in this case because the rows with duplicate user_id are not entirely identical. 
+df2 = df2.drop(labels=1899, axis=0)
+# Check again if the row with a duplicate user_id is deleted or not
+df2.query("user_id == 773192")
+
+
+
 
