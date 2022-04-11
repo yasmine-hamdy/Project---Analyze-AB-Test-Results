@@ -142,3 +142,6 @@ plt.title('Difference in "Converted" Probability - Sampling Distribution')
 plt.xlabel('Differences')
 plt.ylabel('Number of occurences')
 plt.axvline(obs_diff, c='r');
+
+# What proportion of the p_diffs are greater than the actual difference observed in the df2 data?
+(p_diffs > obs_diff).mean()
