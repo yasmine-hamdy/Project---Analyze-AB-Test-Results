@@ -168,3 +168,6 @@ n_old = df2[df2['landing_page'] == 'old_page'].count()[0]
 # number of individuals who received new_page
 n_new = df2[df2['landing_page'] == 'new_page'].count()[0]
 
+# use sm.stats.proportions_ztest() to compute your test statistic and p-value
+z_score, p_value = sm.stats.proportions_ztest([convert_old, convert_new], [n_old, n_new], alternative='smaller')
+print(z_score, p_value)
