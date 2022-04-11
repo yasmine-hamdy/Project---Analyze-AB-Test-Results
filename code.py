@@ -107,3 +107,7 @@ p_converted_pop
 # What is  𝑛𝑛𝑒𝑤 , the number of individuals in the treatment group?
 n_new = df2[df2['landing_page'] == 'new_page'].count()[0]
 n_new 
+
+# What is  𝑛𝑜𝑙𝑑 , the number of individuals in the control group?
+n_old = df2[df2['landing_page'] == 'old_page'].count()[0]
+n_old
