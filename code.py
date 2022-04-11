@@ -15,3 +15,7 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 #We are setting the seed to assure you get the same answers on quizzes as we set up
 random.seed(42)
+
+# Read in the dataset from the ab_data.csv file and take a look at the top few rows
+df = pd.read_csv('ab_data.csv')
+df.head()
