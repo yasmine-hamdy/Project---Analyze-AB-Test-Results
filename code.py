@@ -221,3 +221,7 @@ countries.head()
 # Join with the df2 dataframe
 df_merged = pd.merge(df2, countries, on='user_id', how='outer')
 df_merged.head()
+
+# Create the necessary dummy variables
+df_merged[['UK', 'US', 'CA']] = pd.get_dummies(df_merged['country'])
+df_merged.head()
