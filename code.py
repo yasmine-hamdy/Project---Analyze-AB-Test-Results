@@ -22,3 +22,6 @@ df.head()
 
 # number of rows in the dataset
 df.shape[0]
+
+# number of unique users in the dataset
+df.user_id.nunique()
