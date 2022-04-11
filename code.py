@@ -60,6 +60,10 @@ df2 = df2.drop(labels=1899, axis=0)
 # Check again if the row with a duplicate user_id is deleted or not
 df2.query("user_id == 773192")
 
+# probability of an individual converting regardless of the page they receive
+p_converted_pop = df2.converted.mean()
+p_converted_pop
+
 
 
 
