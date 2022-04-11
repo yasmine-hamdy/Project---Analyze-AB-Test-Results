@@ -145,3 +145,8 @@ plt.axvline(obs_diff, c='r');
 
 # What proportion of the p_diffs are greater than the actual difference observed in the df2 data?
 (p_diffs > obs_diff).mean()
+# This is the p-value, and it represents the probability of the observed change in
+# average conversion occurring or an average change even more in favor of an 
+# increase in conversion given there was actually no change in conversion. 
+# The p-value above leads us to fail to reject the null hypothesis because 
+# it's higher than the error threshhold we had set (5%).
