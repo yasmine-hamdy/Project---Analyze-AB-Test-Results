@@ -81,4 +81,19 @@ prob_new_page = (df2[df2['landing_page'] == 'new_page'].count()[0]) / df2.shape[
 prob_new_page
 
 
+# Part II - A/B Test
 
+# 𝐻0 : 𝑝𝑜𝑙𝑑 + 𝑝𝑛𝑒𝑤 >= 0
+
+# 𝐻1 : 𝑝𝑜𝑙𝑑 + 𝑝𝑛𝑒𝑤 < 0
+
+# Under the null hypothesis  𝐻0 , assume that  𝑝𝑛𝑒𝑤  and  𝑝𝑜𝑙𝑑  are equal. Furthermore, assume that  𝑝𝑛𝑒𝑤  and  𝑝𝑜𝑙𝑑  both are equal to the converted success rate in the df2 data regardless of the page. So, our assumption is:
+
+# 𝑝𝑛𝑒𝑤  =  𝑝𝑜𝑙𝑑  =  𝑝𝑝𝑜𝑝𝑢𝑙𝑎𝑡𝑖𝑜𝑛
+
+# In this section, we will:
+
+# Simulate (bootstrap) sample data set for both groups, and compute the "converted" probability  𝑝  for those samples.
+# Use a sample size for each group equal to the ones in the df2 data.
+# Compute the difference in the "converted" probability for the two samples above.
+# Perform the sampling distribution for the "difference in the converted probability" between the two simulated-samples over 10,000 iterations; and calculate an estimate.
