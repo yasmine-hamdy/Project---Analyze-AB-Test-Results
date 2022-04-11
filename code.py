@@ -260,3 +260,9 @@ results.summary2()
 
 # From my point of view, we can do without the interaction variables because they
 # didn't add significant changes to our model.
+
+# Conclusion:
+# In conclusion, I think the company should stick with the old page for now and
+# maybe extend the test duration for another four weeks just to ensure 
+# eliminating possible biases in the responses such as change aversion and 
+# novelty effect.
