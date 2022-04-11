@@ -196,3 +196,19 @@ results = logit_mod.fit()
 # model summary
 results.summary2()
 
+# The p-value associated with ab_page in this regression model is 0.1899. It differs from the value computed in part II above due to the difference in the null and alternative hypotheses. In the previous part, this was the hypothesis test and it was one-sided:
+
+# 𝐻0 :  𝑝𝑜𝑙𝑑  +  𝑝𝑛𝑒𝑤  >= 0
+
+# 𝐻1  :  𝑝𝑜𝑙𝑑  +  𝑝𝑛𝑒𝑤  < 0
+
+# In the regression model, however, the hypothesis test is different and it is two sided. It is as follows:
+
+# 𝐻0 :  β𝑖  = 0
+
+# 𝐻1  :  β𝑖  ≠ 0
+
+# The current p-value is greater than a type I error rate of 0.05. The p-value suggests that there is statistical evidence that the population slope associated with the treatment group in relating to conversion is non-zero.
+
+# The summary shows that conversion is 0.985 times as likely in the treatment group than the control group, holding all other variables constant.
+
