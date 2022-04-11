@@ -171,3 +171,9 @@ n_new = df2[df2['landing_page'] == 'new_page'].count()[0]
 # use sm.stats.proportions_ztest() to compute your test statistic and p-value
 z_score, p_value = sm.stats.proportions_ztest([convert_old, convert_new], [n_old, n_new], alternative='smaller')
 print(z_score, p_value)
+
+# The earlier p-value was about 0.908 and this p-value is almost 0.91 and they 
+# both are less than the type I error thus supporting the previous finding of 
+# failing to reject the null hypothesis. Morevoer, the z-score of 1.31 is less 
+# than  𝑍𝛼  or  𝑍0.05  which is 1.645 for one-tailed tests; and since this is a 
+# right-tailed test, we again fail to reject the null hypothesis.
