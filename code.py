@@ -193,3 +193,6 @@ logit_mod =sm.Logit(df2['converted'],df2[['intercept', 'ab_page']])
 
 results = logit_mod.fit()
 
+# model summary
+results.summary2()
+
