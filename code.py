@@ -50,3 +50,8 @@ df2.user_id.nunique()
 
 # repeated user_id in df2
 df2.loc[df2.user_id.duplicated(), :]
+
+# Display the rows for the duplicate user_id
+df2.query("user_id == 773192")
+
+
