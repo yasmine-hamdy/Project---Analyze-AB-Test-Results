@@ -34,3 +34,9 @@ df.groupby('group')['landing_page'].value_counts()
 
 # missing values
 df.isnull().any(axis=1).sum()
+
+# Remove the inaccurate rows, and store the result in a new dataframe df2
+df2 = df.drop(df[(df.group == 'control') & (df.landing_page == 'new_page')].index)
+df2.head()
+df2.drop(df2[(df2.group == 'treatment') & (df2.landing_page == 'old_page')].index, inplace=True)
+df2.head()
