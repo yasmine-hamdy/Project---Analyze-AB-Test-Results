@@ -225,3 +225,9 @@ df_merged.head()
 # Create the necessary dummy variables
 df_merged[['UK', 'US', 'CA']] = pd.get_dummies(df_merged['country'])
 df_merged.head()
+
+# fit regression model
+logit_mod =sm.Logit(df_merged['converted'],df_merged[['intercept', 'UK', 'US']])
+
+results = logit_mod.fit()
+results.summary2()
