@@ -212,3 +212,12 @@ results.summary2()
 
 # The summary shows that conversion is 0.985 times as likely in the treatment group than the control group, holding all other variables constant.
 
+# Now along with testing if the conversion rate changes for different pages, also add an effect based on which country a user lives in
+
+# Read the countries.csv
+countries = pd.read_csv('countries.csv')
+countries.head()
+
+# Join with the df2 dataframe
+df_merged = pd.merge(df2, countries, on='user_id', how='outer')
+df_merged.head()
