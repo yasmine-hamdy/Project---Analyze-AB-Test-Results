@@ -64,6 +64,10 @@ df2.query("user_id == 773192")
 p_converted_pop = df2.converted.mean()
 p_converted_pop
 
+# Given that an individual was in the control group, what is the probability they converted
+control_conv = (df2.query('group == "control"')['converted']).mean()
+control_conv
+
 
 
 
