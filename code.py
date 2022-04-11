@@ -103,3 +103,7 @@ p_converted_pop
 
 # conversion rate for  𝑝𝑜𝑙𝑑  under the null hypothesis
 p_converted_pop
+
+# What is  𝑛𝑛𝑒𝑤 , the number of individuals in the treatment group?
+n_new = df2[df2['landing_page'] == 'new_page'].count()[0]
+n_new 
