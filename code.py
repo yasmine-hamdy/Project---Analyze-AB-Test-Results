@@ -25,3 +25,6 @@ df.shape[0]
 
 # number of unique users in the dataset
 df.user_id.nunique()
+
+# proportion of users converted
+df.converted.mean()
