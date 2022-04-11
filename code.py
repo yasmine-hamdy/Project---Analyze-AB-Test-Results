@@ -44,3 +44,7 @@ df2.head()
 # Double Check all of the incorrect rows were removed from df2 - 
 # Output of the statement below should be 0
 df2[((df2['group'] == 'treatment') == (df2['landing_page'] == 'new_page')) == False].shape[0]
+
+# number of unique user_ids in df2
+df2.user_id.nunique()
+
