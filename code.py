@@ -19,3 +19,6 @@ random.seed(42)
 # Read in the dataset from the ab_data.csv file and take a look at the top few rows
 df = pd.read_csv('ab_data.csv')
 df.head()
+
+# number of rows in the dataset
+df.shape[0]
