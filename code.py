@@ -135,3 +135,10 @@ p_diffs = []
 new_page_converted = np.random.binomial(n_new, p_converted_pop, 10000)/n_new
 old_page_converted = np.random.binomial(n_old, p_converted_pop, 10000)/n_old
 p_diffs = new_page_converted - old_page_converted
+
+# Plot a histogram of the p_diffs
+plt.hist(p_diffs);
+plt.title('Difference in "Converted" Probability - Sampling Distribution')
+plt.xlabel('Differences')
+plt.ylabel('Number of occurences')
+plt.axvline(obs_diff, c='r');
