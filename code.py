@@ -117,3 +117,8 @@ n_old
 # hint: use np.random.choice()
 new_page_converted = np.random.choice([0,1], size=(1, n_new), p=[1-p_converted_pop, p_converted_pop])
 new_page_converted
+
+# Simulate a Sample for the control Group
+# Simulate  𝑛𝑜𝑙𝑑  transactions with a conversion rate of  𝑝𝑜𝑙𝑑  under the null hypothesis
+old_page_converted = np.random.choice([0,1], size=(1, n_old), p=[1-p_converted_pop, p_converted_pop])
+old_page_converted
