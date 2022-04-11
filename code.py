@@ -231,3 +231,8 @@ logit_mod =sm.Logit(df_merged['converted'],df_merged[['intercept', 'UK', 'US']])
 
 results = logit_mod.fit()
 results.summary2()
+
+# look at an interaction between page and country to see if are there significant 
+# effects on conversion.
+df_merged['US_ab_page'] = df_merged['US'] * df_merged['ab_page']
+df_merged['UK_ab_page'] = df_merged['UK'] * df_merged['ab_page']
