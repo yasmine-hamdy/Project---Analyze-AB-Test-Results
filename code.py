@@ -31,3 +31,6 @@ df.converted.mean()
 
 # number of times when the "group" is treatment but "landing_page" is not a new_page
 df.groupby('group')['landing_page'].value_counts()
+
+# missing values
+df.isnull().any(axis=1).sum()
