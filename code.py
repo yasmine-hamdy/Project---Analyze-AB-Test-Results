@@ -76,5 +76,9 @@ treat_conv
 obs_diff = treat_conv - control_conv
 obs_diff
 
+# What is the probability that an individual received the new page?
+prob_new_page = (df2[df2['landing_page'] == 'new_page'].count()[0]) / df2.shape[0]
+prob_new_page
+
 
 
