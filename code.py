@@ -68,6 +68,11 @@ p_converted_pop
 control_conv = (df2.query('group == "control"')['converted']).mean()
 control_conv
 
+# Given that an individual was in the treatment group, what is the probability they converted?
+treat_conv = (df2.query('group == "treatment"')['converted']).mean()
+treat_conv
+
+
 
 
 
